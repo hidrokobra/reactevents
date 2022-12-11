@@ -1,23 +1,32 @@
 import React from 'react';
-import './idiomas.css';
-
-function App() {
-
-  function handleClick(e) {
-      console.log("a");
-      document.body.style.backgroundColor = "#f3f3f3";
-      document.body.style.backgroundImage = "url('https://i.imgur.com/e2rSzxX.png')";
-  }
+import Navbar from './components/Navbar';
+import './App.css';
+import './formularios.css';
+import './index.css';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
+import Services from './components/pages/Services';
+import Products from './components/pages/Products';
+import ContactUs from './components/pages/ContactUs';
+import SignUp from './components/pages/SignUp';
+import Marketing from './components/pages/Marketing';
+import Consulting from './components/pages/Consulting';
   
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div class="animate1"><button class="button-lang" role="button">English</button></div>
-        <div class="animate2"><button class="button-lang" role="button">Español</button></div>
-        <div class="animate3"><button class="button-lang" role="button">Francais</button></div>
-      </header>
-    </div>
-  );
+function App() {
+return (
+    <Router>
+    <Navbar />
+    <Routes>
+        <Route path='/' exact component={Home} />
+        <Route path='/services' component={Services} />
+        <Route path='/products' component={Products} />
+        <Route path='/contact-us' component={ContactUs} />
+        <Route path='/sign-up' component={SignUp} />
+        <Route path='/marketing' component={Marketing} />
+        <Route path='/consulting' component={Consulting} />
+    </Routes>
+    </Router>
+);
 }
 
 export default App;

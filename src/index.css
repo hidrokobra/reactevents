@@ -4,8 +4,7 @@
         height: 100%;
         margin: 0;
         overflow: hidden;
-        background-color: rgb(43, 43, 43);
-        /*background-image: url("https://i.imgur.com/JfQZZSA.png");*/
+        background-image: url("https://i.imgur.com/JfQZZSA.png");
         height: 100%; 
         background-position: center;
         background-repeat: no-repeat;
@@ -18,18 +17,19 @@
 
     .login {
         background-color: rgb(255, 255, 255);
-        width: 100px;
+        width: 250px;
         height: 100%;
         padding: 100px;
         position: absolute;
         right: 0;
         top: -20px;
-        transition: width .8s;
+    }
+        /*transition: width .8s;
     }
 
     .login:hover {
         width: 300px;
-      }
+      }*/
 
     .checkbonito {
         position: absolute;
