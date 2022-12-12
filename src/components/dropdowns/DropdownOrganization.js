@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { MenuItems } from './MenuItems';
+import { MenuItemsOrganization } from './MenuItemsOrganization';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
 
-function Dropdown() {
+function DropdownOrganization() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -14,7 +14,7 @@ function Dropdown() {
         onClick={handleClick}
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
-        {MenuItems.map((item, index) => {
+        {MenuItemsOrganization.map((item, index) => {
           return (
             <li key={index}>
               <Link
@@ -32,4 +32,4 @@ function Dropdown() {
   );
 }
 
-export default Dropdown;
+export default DropdownOrganization;

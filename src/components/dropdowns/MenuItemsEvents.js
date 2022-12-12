@@ -1,7 +1,7 @@
 export const MenuItemsEvents = [
   {
     title: 'Create Event',
-    path: '/marketing',
+    path: '../../pages/Eventsmain',
     cName: 'dropdown-link'
   },
   {

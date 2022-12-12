@@ -4,8 +4,8 @@ import './App.css';
 import './formularios.css';
 import './index.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
-import Services from './components/pages/Services';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Eventsmain from './components/pages/Eventsmain';
 import Products from './components/pages/Products';
 import ContactUs from './components/pages/ContactUs';
 import SignUp from './components/pages/SignUp';
@@ -18,7 +18,7 @@ return (
     <Navbar />
     <Routes>
         <Route path='/' exact component={Home} />
-        <Route path='/services' component={Services} />
+        <Route path='/eventsmain' component={<Eventsmain/>} />
         <Route path='/products' component={Products} />
         <Route path='/contact-us' component={ContactUs} />
         <Route path='/sign-up' component={SignUp} />

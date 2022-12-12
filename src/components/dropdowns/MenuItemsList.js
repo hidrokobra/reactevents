@@ -1,4 +1,4 @@
-export const MenuItems = [
+export const MenuItemsList = [
   {
     title: 'Active events',
     path: '/marketing',

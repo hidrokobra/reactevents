@@ -1,6 +1,6 @@
 import React from 'react';
-import './formularios.css';
-import './index.css';
+import '../../formularios.css';
+import '../../index.css';
 
 const About = () => {
   return (
