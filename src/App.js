@@ -17,10 +17,10 @@ return (
     <Routes>
         <Route path='/' exact component={Home} />
         <Route path='/components/pages/CreateEvent' component={CreateEvent} />
-        <Route path='/products' component={ActiveEvents} />
-        <Route path='/contact-us' component={FreeDays} />
+        <Route path='/ActiveEvents' component={ActiveEvents} />
+        <Route path='/FreeDays' component={FreeDays} />
         <Route path='/sign-up' component={SignUp} />
-        <Route path='/marketing' component={Profile} />
+        <Route path='/Profileg' component={Profile} />
     </Routes>
     </Router>
 );
