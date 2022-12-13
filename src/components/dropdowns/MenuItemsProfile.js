@@ -1,17 +1,17 @@
 export const MenuItemsProfile = [
     {
       title: 'Update profile',
-      path: '/marketing',
+      path: '/profile',
       cName: 'dropdown-link'
     },
     {
       title: 'Set day/night',
-      path: '/consulting',
+      path: '/daynight',
       cName: 'dropdown-link'
     },
     {
         title: 'Change Language',
-        path: '/consulting',
+        path: '/selectlanguage',
         cName: 'dropdown-link'
       }
   ];

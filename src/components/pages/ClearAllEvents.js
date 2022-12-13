@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Consulting() {
+export default function Clearallevents() {
   return (
     <>
-      <h1 className='consulting'>CONSULTING</h1>
+      <h1 className='consulting'>Clear all events</h1>
     </>
   );
 }

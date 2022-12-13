@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Marketing() {
+export default function Finishedevents() {
   return (
     <>
-      <h1 className='marketing'>MARKETING</h1>
+      <h1 className='consulting'>Finished events</h1>
     </>
   );
 }

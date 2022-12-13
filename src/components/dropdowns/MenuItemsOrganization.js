@@ -1,12 +1,12 @@
 export const MenuItemsOrganization = [
     {
       title: 'Manage free days',
-      path: '/marketing',
+      path: '/freedays',
       cName: 'dropdown-link'
     },
     {
       title: 'Manage meeting places',
-      path: '/consulting',
+      path: '/meetingplaces',
       cName: 'dropdown-link'
     }
   ];

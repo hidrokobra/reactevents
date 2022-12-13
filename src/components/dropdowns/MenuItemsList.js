@@ -1,27 +1,27 @@
 export const MenuItemsList = [
   {
     title: 'Active events',
-    path: '/marketing',
+    path: '/activeevents',
     cName: 'dropdown-link'
   },
   {
     title: 'Expired events',
-    path: '/consulting',
+    path: '/expiredevents',
     cName: 'dropdown-link'
   },
   {
     title: 'Finished events',
-    path: '/design',
+    path: '/finishedevents',
     cName: 'dropdown-link'
   },
   {
     title: 'Postponed events',
-    path: '/development',
+    path: '/postponedevents',
     cName: 'dropdown-link'
   },
   {
     title: 'All events',
-    path: '/development',
+    path: '/allevents',
     cName: 'dropdown-link'
   }
 ];

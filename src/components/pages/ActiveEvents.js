@@ -1,11 +1,9 @@
 import React from 'react';
-  
-const Contact = () => {
+
+export default function Activeevents() {
   return (
-    <div>
-      <h1>Mail us on feedback@geeksforgeeks.org</h1>
-    </div>
+    <>
+      <h1 className='consulting'>ActiveEvents</h1>
+    </>
   );
-};
-  
-export default Contact;
+}

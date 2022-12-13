@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../formularios.css';
-import '../../index.css';
+import '../CSS/formularios.css';
+import '../CSS/index.css';
 
-const About = () => {
+const Eventsmain = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -44,4 +44,4 @@ const About = () => {
   );
 };
   
-export default About;
+export default Eventsmain;
