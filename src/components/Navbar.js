@@ -102,7 +102,7 @@ function Navbar() {
 
           {/* dropdown Events */} 
           <li className='nav-item' onMouseEnter={onMouseEnterEvents} onMouseLeave={onMouseLeaveEvents}>
-            <Link to='/events' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/CreateEvent' className='nav-links' onClick={closeMobileMenu}>
               Events <i className='fas fa-caret-down' />
             </Link>
             {dropdownEvents && <DropdownEvents />}
@@ -110,7 +110,7 @@ function Navbar() {
 
           {/* dropdown List */}
           <li className='nav-item' onMouseEnter={onMouseEnterList} onMouseLeave={onMouseLeaveList}>
-            <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/ActiveEvents' className='nav-links' onClick={closeMobileMenu}>
               List <i className='fas fa-caret-down' />
             </Link>
             {dropdownList && <Dropdown />}
@@ -118,7 +118,7 @@ function Navbar() {
 
           {/* dropdown Organization */}
           <li className='nav-item' onMouseEnter={onMouseEnterOrganization} onMouseLeave={onMouseLeaveOrganization}>
-            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/FreeDays' className='nav-links' onClick={closeMobileMenu}>
               Organization <i className='fas fa-caret-down' />
             </Link>
             {dropdownOrganization && <DropdownOrganization />}
@@ -126,7 +126,7 @@ function Navbar() {
 
           {/* dropdown Profile */}
           <li className='nav-item' onMouseEnter={onMouseEnterProfile} onMouseLeave={onMouseLeaveProfile}>
-            <Link to='/contact-us' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/Profile' className='nav-links' onClick={closeMobileMenu}>
               Profile <i className='fas fa-caret-down' />
             </Link>
             {dropdownProfile && <DropdownProfile />}
