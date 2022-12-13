@@ -1,6 +1,6 @@
 
 import React from "react";
-import '../idiomas.css';
+import '../CSS/idiomas.css';
   
 const About = () => {
   return (

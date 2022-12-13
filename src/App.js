@@ -1,16 +1,14 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import './App.css';
-import './formularios.css';
-import './index.css';
+import './components/CSS/formularios.css';
+import './components/CSS/index.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Eventsmain from './components/pages/Eventsmain';
-import Products from './components/pages/Products';
-import ContactUs from './components/pages/ContactUs';
+import CreateEvent from './components/pages/CreateEvent';
+import ActiveEvents from './components/pages/ActiveEvents';
+import FreeDays from './components/pages/FreeDays';
 import SignUp from './components/pages/SignUp';
-import Marketing from './components/pages/Marketing';
-import Consulting from './components/pages/Consulting';
+import Profile from './components/pages/Profile';
   
 function App() {
 return (
@@ -18,12 +16,11 @@ return (
     <Navbar />
     <Routes>
         <Route path='/' exact component={Home} />
-        <Route path='/eventsmain' component={<Eventsmain/>} />
-        <Route path='/products' component={Products} />
-        <Route path='/contact-us' component={ContactUs} />
+        <Route path='/components/pages/CreateEvent' component={CreateEvent} />
+        <Route path='/products' component={ActiveEvents} />
+        <Route path='/contact-us' component={FreeDays} />
         <Route path='/sign-up' component={SignUp} />
-        <Route path='/marketing' component={Marketing} />
-        <Route path='/consulting' component={Consulting} />
+        <Route path='/marketing' component={Profile} />
     </Routes>
     </Router>
 );

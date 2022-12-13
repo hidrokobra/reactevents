@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './CSS/Navbar.css';
 import DropdownEvents from './dropdowns/DropdownEvents';
 import Dropdown from './dropdowns/DropdownList';
 import DropdownOrganization from './dropdowns/DropdownOrganization';
@@ -9,6 +9,7 @@ import DropdownProfile from './dropdowns/DropdownProfile';
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  // Switch for each dropdown, indicate if it's active or not
   const [dropdownEvents, setDropdownEvents] = useState(false);
   const [dropdownList, setDropdownList] = useState(false);
   const [dropdownOrganization, setDropdownOrganization] = useState(false);
@@ -17,6 +18,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  //dropdown for "Events"
   const onMouseEnterEvents = () => {
     if (window.innerWidth < 960) {
       setDropdownEvents(false);
@@ -33,6 +35,7 @@ function Navbar() {
     }
   };
 
+  //dropdown for "List"
   const onMouseEnterList = () => {
     if (window.innerWidth < 960) {
       setDropdownList(false);
@@ -49,6 +52,7 @@ function Navbar() {
     }
   };
 
+  //dropdown for "Organization"
   const onMouseEnterOrganization = () => {
     if (window.innerWidth < 960) {
       setDropdownOrganization(false);
@@ -65,6 +69,7 @@ function Navbar() {
     }
   };
 
+  //dropdown for "Profile"
   const onMouseEnterProfile = () => {
     if (window.innerWidth < 960) {
       setDropdownProfile(false);
@@ -83,6 +88,7 @@ function Navbar() {
 
   return (
     <>
+      {/* Navbar */}
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           EVENTS
@@ -91,8 +97,10 @@ function Navbar() {
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
+
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
+          {/* dropdown Events */} 
           <li className='nav-item' onMouseEnter={onMouseEnterEvents} onMouseLeave={onMouseLeaveEvents}>
             <Link to='/events' className='nav-links' onClick={closeMobileMenu}>
               Events <i className='fas fa-caret-down' />
@@ -100,6 +108,7 @@ function Navbar() {
             {dropdownEvents && <DropdownEvents />}
           </li>
 
+          {/* dropdown List */}
           <li className='nav-item' onMouseEnter={onMouseEnterList} onMouseLeave={onMouseLeaveList}>
             <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
               List <i className='fas fa-caret-down' />
@@ -107,13 +116,15 @@ function Navbar() {
             {dropdownList && <Dropdown />}
           </li>
 
+          {/* dropdown Organization */}
           <li className='nav-item' onMouseEnter={onMouseEnterOrganization} onMouseLeave={onMouseLeaveOrganization}>
-          <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
               Organization <i className='fas fa-caret-down' />
             </Link>
             {dropdownOrganization && <DropdownOrganization />}
           </li>
 
+          {/* dropdown Profile */}
           <li className='nav-item' onMouseEnter={onMouseEnterProfile} onMouseLeave={onMouseLeaveProfile}>
             <Link to='/contact-us' className='nav-links' onClick={closeMobileMenu}>
               Profile <i className='fas fa-caret-down' />
@@ -121,14 +132,14 @@ function Navbar() {
             {dropdownProfile && <DropdownProfile />}
           </li>
 
+          {/* Log-out button */}
           <li>
             <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
               Log out
             </Link>
           </li>
-
         </ul>
-        <Button />
+        <Button />     
       </nav>
     </>
   );
