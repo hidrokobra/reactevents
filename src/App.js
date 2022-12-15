@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import './components/CSS/formularios.css';
-/*import './components/CSS/index.css';*/
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ActiveEvents from './components/pages/ActiveEvents';
