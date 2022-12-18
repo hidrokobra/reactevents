@@ -31,7 +31,7 @@ export default function Login() {
     }
   }
   async function handleOnClick(){
-
+/* Login auth const */
     const googleProvider = new GoogleAuthProvider();
     await singInWithGoogle(googleProvider);
 
