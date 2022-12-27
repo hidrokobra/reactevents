@@ -17,7 +17,7 @@ export default function Home() {
             <br />
             <tr>
               <td>
-                <img src="https://i.imgur.com/F1YozVZ.png" class="pera2" />
+                <img src="https://i.imgur.com/k1kYO8J.png" class="pera2" />
                 <h1 class="title2">Organice your time properly</h1>
               </td>
               <td>
