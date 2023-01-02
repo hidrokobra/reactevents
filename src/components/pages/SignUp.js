@@ -45,6 +45,14 @@ export default function Login() {
     }
   }
 
+  if (state === 2){
+    return (
+    <>
+        <div><button className='btn' onClick={handleOnClick}>Login</button></div>
+    </>
+    );
+  }
+
   if (state === 3){
     return (
     <>
@@ -54,6 +62,14 @@ export default function Login() {
   }
 
   if (state === 4){
+    return (
+    <>
+        <div><button className='btn' onClick={handleOnClick}>Login</button></div>
+    </>
+    );
+  }
+
+  if (state === 5){
     return (
     <>
         <div><button className='btn' onClick={handleOnClick}>Login</button></div>
