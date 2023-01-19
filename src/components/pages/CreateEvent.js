@@ -1,7 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../CSS/formularios.css';
+import { useState } from 'react'
 
-export default function Createevent() {
+function FirebaseDemo() {
+
+  const [details, setDetails] = useState({
+      fName: '',
+      lName: '',
+      email: '',
+     
+  })
+
+  const PostData =async(e)=>{
+      e.preventDefault()
+
+      const{fName,lName,email}=details;
+
+     const res=await fetch("https://amit-64616-default-rtdb.firebaseio.com/amitform.json",
+     {
+         method:'POST',
+         headers:{
+             'Content-Type':'application/json'
+         },
+         body:JSON.stringify({
+          fName,
+          lName,
+          email,
+         
+         })
+      })
+
+  }
+
+return (
+  <div className='form' >
+      <input type='text' placeholder='Enter your first name' onChange={(e)=>
+          setDetails({...details,fName:e.target.value})} />
+      <input type='text' placeholder='Enter your last name' onChange={(e)=>
+          setDetails({...details,lName:e.target.value})}  />
+      <input type='email' placeholder='Enter your Email address' onChange={(e)=>
+          setDetails({...details,email:e.target.value})} />
+      <button onClick={PostData}>Submit</button>
+  </div>
+)
+}
+
+export default FirebaseDemo
+
+/*export default function Createevent() {
   return (
     <>
       <div class="newevent">
@@ -24,4 +70,4 @@ export default function Createevent() {
       </div>
     </>
   );
-}
+}*/
